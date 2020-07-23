@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Course2-assignment\"\nauthor: \"Haoming\"\ndate: \"3/6/2017\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = FALSE)\n```\n\n## The \"Eden\" in the movie \"Logan\"\n### From the recently published movie \"Logan\", we see a location for the young mutants to go to be safe, Eden in North Dakota. After the movie was on, so many people doubted the truthfulness of this location. In the following map is the true place named Eden.\n\n```{r}\nlibrary(leaflet)\nxmanicon <- makeIcon(\n  iconUrl = 'X-Men-PNG-Clipart.png',\n  iconWidth = 20, iconHeight = 20\n  \n)\nmap_eden <- leaflet() %>%\n  addProviderTiles(providers$Esri.NatGeoWorldMap) %>%\n  addProviderTiles(providers$Stamen.TonerLabels,options = providerTileOptions(opacity = 0.45)) %>%\n  addMarkers(lat=48.5161827, lng=-97.8651235, icon = xmanicon, popup = \"<a href='http://www.thewrap.com/logan-eden-xmen-marvel-comics/'>Eden</a>\") %>%\n  addWMSTiles(\n    \"http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi\",\n    layers = \"nexrad-n0r-900913\",\n    options = WMSTileOptions(format = \"image/png\", transparent = TRUE),\n    attribution = \"Weather data © 2012 IEM Nexrad\"\n  )\n\nmap_eden\n```\n\n",
+    "created" : 1488781228881.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1169683988",
+    "id" : "539A15C7",
+    "lastKnownWriteTime" : 1488785848,
+    "last_content_update" : 1488785848053,
+    "path" : "D:/MicFile/百度云同步盘/R_Workspace/Programs in Coursera/Data Product/Week2 Assignment-R Markdown and Leaflet/Assignment2Slide.Rmd",
+    "project_path" : "Assignment2Slide.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

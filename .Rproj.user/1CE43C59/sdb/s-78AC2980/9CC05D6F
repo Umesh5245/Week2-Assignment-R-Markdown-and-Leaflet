@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"My Fancy Pres\"\noutput: ioslides_presentation\nauthor: \"Haoming\"\ndate: \"2017-3-1\"\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n## My new slide\nsome content\n\n\n### a subtitle\n\n#### a second level subheading\n\n## R Markdown\n\nThis is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.\n\n## Slide with Bullets\n\n- Bullet 1\n- *Bullet 2*\n- **Bullet 3**\n- `bullet 4`\n\n## R code\n\n```{r, comment = ''}\nhead(mtcars)\n```\n\n## Slide with R Output\n\n```{r cars, echo = TRUE}\nsummary(cars)\n```\n\n## Slide with Plot\n\n```{r pressure}\nplot(pressure)\n```\n\n## Slide with Plot2\n\n```{r, fig.align='center', fig.cap='Pressure'}\nplot(pressure)\n```\n\n#leaflet\n\n## world map\n\n```{r, echo=FALSE}\nlibrary(leaflet)\nmy_map <- leaflet() %>%\n  addTiles()\nmy_map\n```\n\n## home marker\n```{r, echo=FALSE}\nlibrary(leaflet)\nmy_map <- my_map %>%\n  addMarkers(lat = 30.3110450000, lng = 120.0930180000, popup = )\n  \nmy_map\n```\n\n## multiple markers\n```{r, echo=FALSE}\nlibrary(leaflet)\ndf <- data.frame(lat = runif(20, 39.1, 39.3),\n                 lng = runif(20,-76.6, -76.5))\ndf %>%\n  leaflet() %>%\n  addTiles() %>%\n  addMarkers()\n\n  \nmy_map\n```",
+    "created" : 1488779830086.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3869167679",
+    "id" : "9CC05D6F",
+    "lastKnownWriteTime" : 1488368746,
+    "last_content_update" : 1488784296588,
+    "path" : "D:/MicFile/百度云同步盘/R_Workspace/Programs in Coursera/Data Product/Demo/MicSlides.Rmd",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
